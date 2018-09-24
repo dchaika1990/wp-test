@@ -1,0 +1,81 @@
+/** custom classes for all elements */
+.title-center {
+  .widget-title {
+    text-align: center;
+  }
+}
+
+.sidebar-visible,
+.shortcode-widget-area .sidebar-visible {
+  display: none;
+}
+aside {
+  .sidebar-visible {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .push-right {
+    margin-left: -97px !important;
+    z-index: 3;
+  }
+  .push-left {
+    margin-right: -97px !important;
+    z-index: 3;
+  }
+}
+
+/* Footer widgets margin*/
+@media  (min-width: 992px) {
+  .widget.margin-top-md {
+    .widget-title {
+      margin-top: 35px;
+      margin-bottom: 55px;
+    }
+  }
+}
+
+/* Services custom classes */
+.negative-img-margin-60 {
+  .img-wrap {
+    margin-left: -15px;
+    margin-right: -15px;
+    @media (min-width: 400px) {
+      margin-left: -35px;
+      margin-right: -35px;
+    }
+    @media (min-width: 1200px) {
+      margin-left: -60px;
+      margin-right: -60px;
+    }
+  }
+  padding: 0 20px;
+  @media (min-width: 400px) {
+    padding: 0 35px;
+  }
+  @media (min-width: 1200px) {
+    padding: 0 60px;
+  }
+}
+.right-padding-60 {
+  @media (min-width: 1200px) {
+    padding-right: 60px;
+  }
+}
+
+.highlight.number {
+  position: relative;
+  top: -7px;
+}
+
+/* Menu custom classes */
+.menu-title {
+ a {
+   font-size: 30px !important;
+   cursor: default;
+   &:hover {
+     opacity: 1 !important;
+   }
+ }
+}

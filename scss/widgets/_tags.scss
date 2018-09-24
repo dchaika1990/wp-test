@@ -1,0 +1,31 @@
+/*widget_tag_cloud*/
+.widget_tag_cloud a {
+	border: 1px solid $backgroundColor_3;
+	background-color: $backgroundColor_3;
+	color: $fontColor4;
+	padding: 3px 15px 1px;
+	margin: 0 4px 10px 0;
+	font-size: 14px !important;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+	display: inline-block;
+}
+
+.widget_tag_cloud a:hover {
+	background-color: transparent;
+	color: $fontColor;
+}
+
+.ds {
+	.widget_tag_cloud a {
+		border: 1px solid $lightColor;
+		color: $fontColor;
+	}
+	.widget_tag_cloud a:hover {
+		background-color: $mainColor;
+		border-color: $mainColor;
+		color: $fontColor;
+	}
+}

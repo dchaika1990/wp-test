@@ -1,0 +1,34 @@
+/* 
+timetable 
+*/
+#timetable {
+	span {
+		display: block;
+	}
+	th, td {
+		vertical-align: middle;
+		font-weight: normal;
+		text-align: center;
+		padding: 25px 5px;
+	}
+	thead {
+		color: $fontColor;
+		th {
+			border: 1px solid $borderColor;
+			border-width: 0 1px;
+		}
+	}
+	tbody {
+		th, td {
+			border: 1px solid $borderColor;
+			@include elementTransition();
+		}
+		.current {
+			background-color: $mainColor;
+			border-color: $mainColor;
+			a {
+				color: $fontColor;
+			}
+		}
+	}
+}

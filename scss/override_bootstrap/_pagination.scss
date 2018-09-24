@@ -1,0 +1,100 @@
+/* pagination */
+.pagination {
+    margin: 0;
+    display: block;
+    line-height: 0;
+}
+.pagination>li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    a.prev,
+    span.prev {
+        font-size: 0;
+        &:before {
+            font-size: 14px;
+            font-family: FontAwesome;
+            content: "\f104";
+            position: relative;
+            top:0;
+            line-height: 58px;
+        }
+    }
+    a.next,
+    span.next {
+        font-size: 0;
+        &:before {
+            font-size: 14px;
+            font-family: FontAwesome;
+            content: "\f105";
+            position: relative;
+            top:0;
+            line-height: 58px;
+        }
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.pagination>li>a,
+.pagination>li>span {
+    text-align: center;
+    padding: 0;
+    color: $fontColor;
+    border: 0;
+    background-color: $backgroundColor_2;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 58px;
+    border-radius: 0;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+// Styles for pagination arrows
+.pagination>li:first-child>a,
+.pagination>li:first-child>span,
+.pagination>li:last-child>a,
+.pagination>li:last-child>span {
+    border-radius: 0;
+}
+.pagination>li>a:hover,
+.pagination>li>span:hover,
+.pagination>li>a:focus,
+.pagination>li>span:focus{
+    background-color: $mainColor;
+    color: $fontColor;
+}
+
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus
+{
+    background-color: $mainColor;
+    border-color: $mainColor;
+    color: $fontColor;
+}
+
+.pagination>.disabled>a,
+.pagination>.disabled>span{
+    background-color: $backgroundColor_2;
+    border: 0;
+}
+.pagination>.disabled>a:hover,
+.pagination>.disabled>span:hover,
+.pagination>.disabled>a:focus,
+.pagination>.disabled>span:focus {
+    background-color: $mainColor;
+    border-color: $mainColor;
+    color: $fontColor;
+}

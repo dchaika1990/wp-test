@@ -1,0 +1,21 @@
+/*
+Admin dashboard styles
+*/
+
+/*Show bootstrap width option only in footer widget area*/
+.widget_bootstrap_width {
+	display: none;
+}
+#sidebar-footer .widget_bootstrap_width,
+#accordion-section-sidebar-widgets-sidebar-footer .widget_bootstrap_width {
+	display: block;
+}
+/*Hidding bullets in list of predefined page, section and column templates*/
+div .fw-builder-templates-types > .fw-builder-templates-type ul.std li {
+	list-style: none;
+}
+
+/* Hiding Unyson Brizy notice */
+.notice.fw-brz-dismiss {
+	display: none !important;
+}

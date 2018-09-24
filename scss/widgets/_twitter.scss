@@ -1,0 +1,42 @@
+/*widget_twitter*/
+.widget_mwt_twitter {
+	ul.tweet_list {
+		margin-top: -20px;
+	}
+	.tweet_avatar {
+		display: none;
+	}
+	.tweet_text {
+		font-size: 20px;
+		color: $fontColor2;
+		line-height: 40px;
+        a {
+          color: $mainColor2;
+          &:hover {
+            color: $fontColor;
+          }
+        }
+	}
+	.tweet_time {
+		display: none;
+	}
+	.tweet_right {
+		overflow: hidden;
+		position: relative;
+		zoom: 1;
+		padding-left: 25px;
+		&:before {
+			font-family: FontAwesome;
+			content: "\f099";
+			font-size: 18px;
+			color: #55acee;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	.tweet_list li + li {
+		margin-top: 10px;
+		clear: both;
+	}
+}

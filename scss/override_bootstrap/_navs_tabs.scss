@@ -1,0 +1,148 @@
+/*nav*/
+.nav-tabs > li {
+	margin-bottom: -2px;
+}
+.nav>li>a:hover,
+.nav>li>a:focus {
+	background-color: inherit;
+}
+
+/*tabs*/
+.tab-content {
+	border-radius: 0;
+	padding: 35px 35px;
+	border: 0;
+	background-color: $backgroundColor_2;
+	margin-bottom: 40px;
+	@media (min-width: 1200px) {
+		padding: 50px 55px;
+	}
+	&.no-border {
+		padding: 36px 0 0;
+		border: none;
+		// background-color: transparent;
+	}
+	&.top-color-border {
+		position: relative;
+		> :before {
+			content: '';
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			top: -2px;
+			height: 5px;
+			background-color: $mainColor;
+		}
+	}
+	.featured-tab-image {
+		margin: -30px -31px 24px -31px;
+	}
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+	border: 1px solid $borderColor;
+}
+.nav-tabs {
+	border-bottom-color: transparent;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+ul.nav-tabs.nav > li > a {
+	font-size: 14px;
+	padding: 10px 15px 10px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+    text-indent: 0.1em;
+	margin-right: 3px;
+	margin-top: 0;
+	margin-bottom: 0;
+	border: 2px solid $borderColor;
+	background-color: transparent;
+	color: $fontColor;
+	border-radius: 0;
+	line-height: 1.42857143;
+	.small-tabs & {
+		padding: 10px 15px;
+	}
+	@media (min-width: 768px) {
+		padding: 14px 35px 14px;
+		letter-spacing: 0.2em;
+		text-indent: 0.2em;
+	}
+	@media (min-width: 1400px) {
+		min-width: 200px;
+	}
+}
+ul.nav-tabs.nav > li.active > a {
+	line-height: 1.5;
+}
+
+ul.nav-tabs.nav > li.active > a,
+ul.nav-tabs.nav > li.active > a:hover,
+ul.nav-tabs.nav > li.active > a:focus {
+	border: 2px solid $mainColor;
+	background-color: transparent;
+	color: $fontColor;
+}
+ul.nav-tabs.nav > li > a:hover,
+ul.nav-tabs.nav > li > a:focus,
+ul.nav-tabs.nav.nav-justified > .active > a {
+	border-color: $mainColor;
+	background-color: transparent;
+	color:$lightColor;
+}
+
+/*vertical tabs*/
+.vertical-tabs  {
+	.tab-content.no-border {
+		padding-top: 0;
+	}
+	.nav > li > a {
+		background-color: $backgroundColor_2;
+		color: $fontColor;
+		padding: 18px 60px 18px 40px ;
+		margin-bottom: 10px;
+		position: relative;
+		i{
+			position: relative;
+			top: 1px;
+			padding-right: 12px;
+		}
+
+	}
+	.nav > li > a:after {
+		color: rgba($lightColor, 0.8);
+		font-family: 'rt-icons-2';
+		content:"\e7c5";
+		position: absolute;
+		font-size: 12px;
+		line-height: 58px;
+		text-align: center;
+		right: 0;
+		top:0;
+		bottom: 0;
+		width: 60px;
+		border-left: 1px solid $borderColor;
+		letter-spacing: 0;
+	}
+
+	.nav > li.active a,
+	.nav > li > a:hover{
+		background-color: $mainColor;
+	}
+}
+@media (min-width: 768px) {
+	.vertical-tabs {
+		.nav {
+		}
+		.tab-content {
+		}
+		.nav > li.active {
+			position: relative;
+			z-index: 2;
+		}
+
+	}
+}

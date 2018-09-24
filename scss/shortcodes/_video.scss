@@ -1,0 +1,28 @@
+/* video */
+.video-shortcode {
+  display: inline-block;
+  position: relative;
+  width: auto;
+    & > a {
+      position: relative;
+      border: 2px solid $mainColor;
+      width: 80px;
+      height: 80px;
+      text-align: center;
+      background-color: transparent;
+      border-radius: 50%;
+      display: block;
+      font-size: 30px;
+      line-height: 74px;
+      &:after {
+        @include elementTransition();
+        content: "\e903";
+        font-family: 'themeicon';
+        color: $fontColor;
+        margin-left: 4px;
+      }
+      &:hover:after {
+        color: $mainColor;
+      }
+    }
+}

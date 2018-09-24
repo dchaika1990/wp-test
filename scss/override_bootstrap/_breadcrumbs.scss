@@ -1,0 +1,37 @@
+/*bootstrap breadcrumbs*/
+.breadcrumb {
+	margin: 2px 0 0 0;
+	padding: 0;
+	background-color: transparent;
+	border-radius: 0;
+	color: $fontColor;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	line-height: 32px;
+	text-transform: uppercase;
+	.last-item {
+		color: $mainColor;
+	}
+}
+.breadcrumb>.active {
+	color: inherit;
+	opacity: 0.9;
+}
+.breadcrumb li {
+	display: inline-block;
+	a {
+		color: $fontColor;
+		&:hover {
+			color: $mainColor;
+		}
+	}
+}
+.breadcrumb>li+li:before {
+  color: $fontColor;
+  padding: 0 18px 0 12px;
+  content: "/";
+  font-size: 14px;
+  position: relative;
+  top: 0;
+}

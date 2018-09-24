@@ -1,0 +1,90 @@
+/* Author Bio Shortcode */
+.author-bio-shortcode {
+
+  text-align: center;
+  .bio-text {
+    color: $fontColor2;
+    font-size: 24px;
+    line-height: 40px;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .author-bio-word {
+    position: absolute;
+    width: 100%;
+    top: -50%;
+    font-size: 240px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: $backgroundColor_1;
+    opacity: 0.3;
+  }
+
+  .owl-carousel-slider {
+    transition: left 0.5s ease;
+    position: relative;
+    margin-top: 100px;
+    transform: translateX(50%);
+  }
+
+  .ui-slider-handle{
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background-color: rgba($backgroundColor_3, 0.1);
+    top:4px;
+    outline: none;
+  }
+  .ui-slider-range {
+    height: 1px;
+    transition: width 0.5s ease;
+    background-color: $backgroundColor_3;
+    position: absolute;
+    top:4px;
+  }
+
+  .author-bio-flex {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+
+    //dots
+    &:first-child {
+      margin-left: -15px;
+      margin-right: -15px;
+      span {
+        transition: background-color 0.5s ease;
+        margin-top: -5px;
+        cursor: pointer;
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $backgroundColor_2;
+        border: 2px solid $mainColor2;
+        &.active {
+
+          background-color: $mainColor2;
+        }
+      }
+      //years
+      & + div {
+        margin-left: -1em;
+        margin-right: -1em;
+        position: relative;
+        top: -60px;
+      }
+    }
+
+    .year-label {
+      transition: color 0.5s ease;
+      color: $fontColor;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 0.2em;
+      text-indent: 0.2em;
+    }
+  }
+}

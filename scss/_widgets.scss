@@ -1,0 +1,252 @@
+/*
+**widgets
+*/
+.sidebar,
+.before-loop-area {
+	.widget-title {
+		text-align: left;
+		position: relative;
+		display: block;
+		font-weight: bold;
+	}
+
+	> .widget {
+		margin-bottom: 50px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	input[type="url"]:focus,
+	input[type="password"]:focus,
+	input[type="search"]:focus,
+	input[type="tel"]:focus,
+	input[type="number"]:focus,
+	textarea:focus,
+	select:focus,
+	.form-control:focus {
+		border-color: $borderColor;
+	}
+}
+
+.before-loop-area  {
+	.widget {
+		margin-top: 30px;
+		margin-bottom: 40px;
+		display: block;
+		overflow: hidden;
+		.widget-title {
+			margin-top: 40px;
+			margin-bottom: 55px;
+		}
+	}
+	.widget.widget-first {
+		margin-top: 0;
+	}
+}
+
+//for wordpress widgets wrapper
+.widget-theme-wrapper {
+	&.with_background,
+	&.muted_background,
+	&.cs,
+	&.ds,
+	&.ls {
+		padding: 35px;
+	}
+}
+
+/* affix-aside */
+.affix-aside {
+	position: relative;
+	&.affix {
+		position: fixed;
+		top: 50px;
+	}
+	@media(max-width: 767px) {
+		&,
+		&.affix,
+		&.affix-bottom  {
+			position: static;
+			width: inherit !important;
+		}
+	}
+}
+
+//Maybe remove module header:
+.module-header {
+	margin: 0 0 38px;
+	text-transform: capitalize;
+	font-size: 40px;
+	.page_footer & {
+		font-size: 28px;
+	}
+}
+
+.widget > h3, 
+.widget-title{
+	font-size: 30px;
+	letter-spacing: 0;
+	margin: 0 0 33px;
+	text-transform: none;
+	font-weight: bold;
+	position: relative;
+	line-height: 32px;
+}
+.widget {
+	&:before,
+	&:after {
+		display: block;
+		content: '';
+		clear: both;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		ul {
+
+			li {
+				padding-left: 20px;
+			}
+		}
+	}
+	li {
+		position: relative;
+	}
+
+	.vertical-item {
+		h4 {
+			font-size: 20px;
+			margin: 17px 0 0;
+		}
+
+		& + & {
+			margin-top: 16px;
+		}
+	}
+	//for selects that we cannot add a .form-control class - maybe remove
+	select {
+		width: 100%;
+		max-width: 100%;
+		height: 80px;
+		padding-left: 27px;
+		padding-right: 40px;
+		padding-top: 9px;
+		padding-bottom: 9px;
+		font-size: 14px;
+		border: 1px solid $backgroundColor_2;
+	}
+}
+
+.page_footer {
+	.widget-title {
+		font-size: 24px;
+		margin-top: 32px;
+		margin-bottom: 20px;
+		position: relative;
+		display: block;
+		.short_line {
+			position: relative;
+			width: 100%;
+			display: block;
+			line-height: 3px;
+			margin-top: 5px;
+			span {
+				width: 50px;
+				height: 3px;
+				display: inline-block;
+				background-color: $mainColor;
+			}
+		}
+	}
+	.special-title {
+		.widget-title {
+			margin-bottom: 40px;
+		}
+	}
+
+	.widget + .widget {
+		.widget-title {
+			margin-top: 50px;
+		}
+	}
+
+	.widget_banner {
+		margin-top: 10px;
+		margin-bottom: 15px;
+	}
+	.widget_text {
+		margin-bottom: 25px;
+	}
+	.widget_craftpro_twitter {
+		ul.tweet_list {
+			padding-top: 5px;
+			overflow: hidden;
+		}
+	}
+	.widget_recent_entries {
+		ul {
+			li {
+				&:first-of-type {
+					padding: 0 0 11px 0;
+				}
+				&:before {
+					display: none;
+				}
+				.post-date {
+					display: block;
+				}
+			}
+		}
+	}
+	#sb_instagram {
+		margin-top: -10px !important;
+	}
+	.item-meta {
+		color: $fontColor;
+	}
+
+	.widget_popular_entries .widget-title + ul {
+		margin-top: -2px;
+	}
+	.widget.text-center,
+	.widget.text-center .widget-title{
+		text-align: center;
+	}
+}
+
+/* Widget Instagram */
+#sb_instagram {
+	padding-bottom: 0 !important;
+	#sbi_images {
+		margin: -10px;
+		width: calc(100% + 20px);
+	}
+}
+
+@media screen and (max-width: 767px) {
+	aside {
+		margin-top: 60px !important;
+	}
+	aside.shortcode-widget-area {
+		margin-top: 0 !important;
+	}
+}
+
+@import 'widgets/search_mailchimp';
+@import 'widgets/nav_recent_categories';
+@import 'widgets/tags';
+@import 'widgets/calendar';
+@import 'widgets/banner';
+@import 'widgets/socials';
+@import 'widgets/icons_list';
+@import 'widgets/slider';
+@import 'widgets/flickr';
+@import 'widgets/twitter';
+@import 'widgets/posts';
+@import 'widgets/theme_posts';
+@import 'widgets/post_tabs';
+@import 'widgets/rss';

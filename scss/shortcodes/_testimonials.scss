@@ -1,0 +1,73 @@
+//testimonials shortcode
+
+.testimonials {
+	&.owl-carousel.owl-loaded {
+		margin-bottom: 0;
+	}
+	&.owl-theme .owl-stage-outer {
+		overflow: visible;
+	}
+	&.owl-theme .owl-nav,
+	&.owl-theme:hover .owl-nav {
+		top: 60%;
+		opacity: 1;
+		@media(max-width: 479px) {
+			top: 15%;
+		}
+	}
+	blockquote {
+		margin-top: 0;
+		margin-bottom: 0;
+		max-width: 1170px;
+		background-color: $backgroundColor_2;
+		@media(min-width: 480px) and (max-width: 991px) {
+			max-width: 80%;
+		}
+	}
+	.avatar {
+		margin-top: 0;
+		margin-bottom: 27px;
+		img {
+			width: 100px;
+			border: 0;
+			border-radius: 50%;
+		}
+	}
+	.author-name {
+		font-size: 30px;
+		text-transform: none;
+		margin: 0;
+		color: $fontColor;
+	}
+	.author-job {
+		color: $mainColor;
+		font-size: 14px;
+		text-transform: uppercase;
+		font-weight: bold;
+		letter-spacing: 0.2em;
+	}
+	.blockqoute-meta {
+		display: block;
+		margin-top: 0;
+		margin-bottom: 7px;
+	}
+	&.blockquote-big {
+		padding: 20px 15px;
+		@media(min-width: 768px) {
+			padding: 20px 35px;
+		}
+	}
+	.blockqoute-content {
+		font-style: italic;
+		font-weight: bold;
+		line-height: 30px;
+		@media(min-width: 992px) {
+			max-width: 720px;
+			margin: 0 auto;
+		}
+	}
+	&.owl-theme .owl-dots {
+		line-height: 1;
+		margin-top: 45px;
+	}
+}

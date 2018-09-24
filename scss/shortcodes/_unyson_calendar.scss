@@ -1,0 +1,200 @@
+/* events calendar */
+//for wordpress - unyson events calendar
+div .fw-shortcode-calendar-wrapper .page-header h3,
+div .btn-group button[data-calendar-nav],
+div .btn-group button[data-calendar-nav*='today'],
+div #cal-slide-content a.event-item {
+	color: $backgroundColor_2;
+}
+div #cal-slide-content a.event-item {
+	text-decoration: none !important;
+	color: $fontColor;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+div #cal-day-box .time-col,
+div #cal-day-box .cal-row-head,
+div #cal-day-box .cal-day-hour,
+div #cal-day-box .cal-row-head,
+div #cal-day-box .cal-day-hour,
+div #cal-day-box .cal-day-hour .cal-day-hour-part,
+div .cal-week-box .cal-column,
+div .cal-row-fluid.cal-row-head [class*="cal-cell"],
+div .cal-week-box .cal-row-head [class*="cal-cell"] small,
+div .cal-year-box [class*="span"],
+div .cal-month-box [class*="cal-cell"],
+div .cal-year-box .row-fluid,
+div .cal-month-box .cal-row-fluid{
+	border-color: $borderColor;
+}
+div .fw-shortcode-calendar .cal-week-box hr {
+	background-color: $borderColor;
+}
+
+div .cal-month-day.cal-day-today.event-day {
+	background-color: $mainColor;
+}
+div .cal-year-box [class*="span"]:hover,
+div .cal-month-box [class*="cal-cell"]:hover {
+	background-color: $mainColor;
+}
+div #cal-slide-tick {
+	border-top-color: transparent;
+}
+
+div .cal-week-box .cal-day-today span[data-cal-date],
+div .cal-week-box .cal-day-today.event-day span[data-cal-date],
+div .cal-month-day.event-day span[data-cal-date] {
+	color: $fontColor;
+}
+
+div .cal-month-box [class*="cal-cell"]:hover span[data-cal-date] {
+	color: $mainColor;
+}
+
+
+/* Shortcode Overrides */
+.theme-calendar-wrappper.fw-shortcode-calendar-wrapper {
+	.page-header {
+		margin-bottom: 15px;
+		h3 {
+			font-size: 32px;
+		}
+		.form-inline {
+			float: none !important;
+			width: 100%;
+			text-align: center;
+			position: relative;
+			.btn-group {
+				margin-right: 0;
+				button[data-calendar-nav] {
+					font-size: 28px;
+					margin-top: 8px;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+.theme-calendar {
+	.text-today {
+		font-size: 16px;
+		font-weight: 300;
+		position: absolute;
+		top: 3px;
+		right: auto;
+		left: 6px;
+		color: $fontColor;
+		text-transform: none;
+		@media(max-width: 480px){
+			font-size: 12px;
+		}
+	}
+	span[data-cal-date] {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -10px;
+		margin-left: -10px;
+		width: 25px;
+		height: 25px;
+		text-align: center;
+		font-size: 16px;
+		font-weight: 300;
+		cursor: pointer;
+		color: $fontColor;
+		transition: all 0.3s ease-in-out;
+		-webkit-transition: all 0.1s ease-in-out;
+		-moz-transition: all 0.1s ease-in-out;
+		-ms-transition: all 0.1s ease-in-out;
+		-o-transition: all 0.1s ease-in-out;
+	}
+	.list-events {
+		position: absolute;
+		top: auto;
+		left: auto;
+		right: 6px;
+		bottom: 3px;
+		margin-top: auto;
+		font-size: 16px;
+		font-weight: 300;
+		color: $fontColor;
+		@media(max-width: 480px){
+			font-size: 12px;
+		}
+	}
+	.cal-month-box [class*="cal-cell"] {
+		background: $lightColor;
+		.ds & {
+			background: $backgroundColor_2;
+		}
+	}
+	.cal-row-fluid.cal-row-head [class*="cal-cell"] {
+		color: $fontColor;
+		font-size: 14px;
+		font-weight: 300;
+		letter-spacing: 0.05em;
+		background: $mainColor;
+		text-transform: uppercase;
+		border-right: 1px solid $mainColor;
+		border-bottom: 1px solid $mainColor;
+	}
+	.cal-month-box [class*="cal-cell"] {
+		border-right: 1px solid $borderColor;
+	}
+	.cal-year-box .row-fluid, .cal-month-box .cal-row-fluid {
+		border-bottom: 1px solid $borderColor;
+		border-left: 1px solid $borderColor;
+		border-right: 1px solid $borderColor;
+	}
+	.cal-month-box {
+		border-bottom: 1px solid $borderColor;
+	}
+	.cal-month-box .day-highlight{
+		border: none;
+		border-right: 1px solid $borderColor !important;
+	}
+	#cal-slide-box {
+		border-top: 0 solid #8c8c8c;
+		border-bottom: 0 solid #fff;
+	}
+	#cal-slide-content {
+		padding: 35px 20px 35px 30px;
+		border-left: 1px solid $borderColor;
+		border-right: 1px solid $borderColor;
+		border-bottom: 1px solid $borderColor;
+        .ds & {
+          background: $backgroundColor_2;
+        }
+	}
+	.cal-month-day.cal-day-outmonth:hover,
+	div .cal-month-day.event-day {
+		background-color: $lightColor;
+        .ds & {
+          background-color: $backgroundColor_2;
+        }
+		&:hover {
+			background-color: $mainColor;
+			span[data-cal-date],
+			.list-events {
+				color: $fontColor;
+			}
+		}
+		span[data-cal-date],
+		.list-events {
+			color: $fontColor;
+		}
+	}
+	.cal-month-day.cal-day-outmonth:hover span[data-cal-date] {
+		background-color: transparent;
+	}
+	div .cal-day-today,
+	div .cal-day-today.event-day {
+		background-color: $mainColor !important;
+		span[data-cal-date],
+		.list-events {
+			color: $fontColor;
+		}
+	}
+}

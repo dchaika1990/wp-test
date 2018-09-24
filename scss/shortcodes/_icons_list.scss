@@ -1,0 +1,41 @@
+/* icons list */
+.icons-list {
+  a {
+    cursor: pointer;
+  }
+  ul {
+    margin: 5px 0;
+    li {
+      border: 0;
+      position: relative;
+      padding: 6px 0 6px 0;
+      line-height: 1;
+      &:first-child {
+        padding: 0 0 6px 0;
+      }
+      .media-left {
+        padding-right: 10px;
+        vertical-align: middle;
+        i {
+          display: inline-block;
+          width: 16px;
+          font-size: 16px;
+          text-align: center;
+          vertical-align: middle;
+          color: $mainColor;
+        }
+      }
+      .media-body {
+        vertical-align: middle;
+        width: auto;
+      }
+    }
+  }
+}
+.ds {
+  .icons-list {
+    .media-body {
+      color: $fontColor;
+    }
+  }
+}

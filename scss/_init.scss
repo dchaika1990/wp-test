@@ -1,0 +1,49 @@
+/* Fonts */
+$fontFamily: "Raleway", sans-serif;
+
+/* Accent colors */
+$mainColor: #ff493c !default;
+$mainColor2: #ffb820 !default;
+
+/* Background colors */
+$backgroundColor_1: #242d3c !default;
+$backgroundColor_2: #1b222e !default;
+$backgroundColor_3: #ffffff !default;
+$backgroundColor_4: #ccc !default;
+
+/* Font colors */
+$fontColor: #ffffff  !default;
+$fontColor2: #989898  !default;
+$fontColor3: #1b222e  !default;
+$fontColor4: #242d3c  !default;
+
+/* Link colors */
+$linkColor: #ffffff  !default;
+$linkHoverColor: #ffb820  !default;
+
+/* Border colors */
+$borderColor: #989898 !default;
+$borderColor2: rgba(255, 255, 255, 0.1) !default;
+
+/* Helper Colors */
+$lightColor: #ffffff;
+$blackColor: #000000;
+
+/* bootstrap colors */
+$colorPrimary: $mainColor;
+//green
+$colorSuccess: #57ab01;
+//blue
+$colorInfo: #027cda;
+//orange
+$colorWarning: #ffb820;
+//red
+$colorDanger: #ff493c;
+
+@mixin elementTransition($proprety: all, $duration: 0.2s, $time_function: ease-in-out, $delay: 0s) {
+    -webkit-transition: $proprety $duration $time_function $delay;
+    -moz-transition: $proprety $duration $time_function $delay;
+    -o-transition: $proprety $duration $time_function $delay;
+    -ms-transition: $proprety $duration $time_function $delay;
+    transition: $proprety $duration $time_function $delay;
+}
