@@ -58,4 +58,20 @@ $options = array(
 			),
 		),
 	),
+    'custom-class-section'         => array(
+        'title'   => esc_html__( 'Custom class', 'umodel' ),
+        'type'    => 'box',
+        'context' => 'side',
+        'options' => array(
+            'post-layout' => array(
+                'type'    => 'text',
+                'value'   => '',
+                'attr'  => array( 'class' => 'custom-class', 'data-foo' => 'bar' ),
+                'label'   => esc_html__( 'custom class', 'umodel' ),
+                'desc'    => esc_html__( 'custom class', 'umodel' ),
+                'help'    => esc_html__( 'custom class', 'umodel' ),
+                'add-button-text' => esc_html__('Add', '{domain}'),
+            ),
+        ),
+    ),
 );

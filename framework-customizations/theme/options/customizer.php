@@ -325,6 +325,7 @@ $options = array(
 				'choices' => array(
 					'1' => UMODEL_THEME_URI . '/img/theme-options/header1.png',
 					'2' => UMODEL_THEME_URI . '/img/theme-options/header2.png',
+					'3' => UMODEL_THEME_URI . '/img/theme-options/header3.png',
 				),
 				'blank'   => false, // (optional) if true, image can be deselected
 			),
