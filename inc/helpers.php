@@ -1162,3 +1162,20 @@ if ( ! function_exists( 'umodel_get_excerpt_for_page_with_unyson_builder' ) ) :
 		return $excerpt;
 	}
 endif;
+
+// FW icon type-v2 process
+if ( ! function_exists( 'umodel_get_icon_type_v2_html' ) ) :
+    function umodel_get_icon_type_v2_html($icon_array) {
+//        fw_print($icon_array);
+        $box_icon_type = ! empty( $icon_array['type']) ? $icon_array['type'] : '';
+        if ( $box_icon_type === 'icon-font' ) {
+            if ( $icon_array['icon-class'] !== '' ) {
+                $icon_html = '<i class="' . $icon_array['icon-class'] . '"></i>';
+            }
+//        } elseif ( $box_icon_type === 'custom-upload' ) {
+        } else {
+            $icon_html = '<img src="' . $icon_array['url'] . '" alt="' . $icon_array['attachment_id'] . '">';
+        }
+        return $icon_html;
+    }
+endif;
